@@ -1,11 +1,9 @@
-[
-    {
-        "id": "malaysia",
+{
+    "malaysia": {
         "name": "Malaysia",
         "currency": "MYR",
-        "providers": [
-            {
-                "id": "tnb",
+        "providers": {
+            "tnb": {
                 "name": "Tenaga Nasional Berhad",
                 "rates": [
                     {"range": [1,200], "rate": 0.218},
@@ -16,6 +14,6 @@
                 ],
                 "late-payment-fee": 0.01
             }
-        ]
+        }
     }
-]
+}
