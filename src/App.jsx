@@ -102,7 +102,7 @@ export default function App() {
           </div>
 
           <div class="flex flex-row gap-2 items-center justify-between">
-            <button onClick={() => {}} class="p-2 bg-[rgb(22,236,106)] rounded-md text-black flex-grow hover:brightness-90 duration-300">
+            <button onClick={() => {}} class="p-2 bg-[rgb(14,118,55)] rounded-md text-white flex-grow hover:brightness-90 duration-300">
               Calculate
             </button>
             <div class="flex flex-row items-center gap-2">
@@ -113,7 +113,7 @@ export default function App() {
 
               <label class="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" class="sr-only peer" />
-                <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[rgb(22,236,106)]"></div>
+                <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[rgb(14,118,55)]"></div>
               </label>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function App() {
 
         {/* calculation */}
         <div class="p-2 flex flex-col gap-4 bg-white rounded-md">
-          <h1 class="p-2 text-lg md:text-xl text-black">
+          <h1 class="text-lg md:text-xl text-black">
             Calculation
           </h1>
         </div>

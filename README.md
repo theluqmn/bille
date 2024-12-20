@@ -4,6 +4,9 @@
 
 → [Visit the website](https://theluqmn.github.io/bille)
 
+> [!WARNING]
+> This project is still in development, though only functionality is left to be implemented.
+
 A simple yet comprehensive electric bill calculator. Supports various electricity providers in various countries. Data is updated regularly. This project also accepts contributions from the public to add more countries and providers.
 
 ## Supported Countries and Providers
