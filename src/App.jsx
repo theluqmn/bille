@@ -72,25 +72,25 @@ export default function App() {
           </div>
 
           <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,236,106)]">
-              <h2 class="text-xl text-black">
-                Total Due
-              </h2>
-              <p class="text-2xl text-black">
-                MYR 0.00
-              </p>
+            <h2 class="text-xl text-black">
+              Total Due
+            </h2>
+            <p class="text-2xl text-black">
+              MYR 0.00
+            </p>
 
-            </div>
+          </div>
 
-            <div class="p-2 flex flex-row gap-2 items-center">
-              <h2 class="text-xl text-black">
-                Enable 1% late payment fee
-              </h2>
+          <div class="p-2 flex flex-row gap-2 items-center">
+            <h2 class="text-xl text-black">
+              Enable 1% late payment fee
+            </h2>
 
-              <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" class="sr-only peer" />
-                <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-              </label>
-            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" class="sr-only peer" />
+              <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[rgb(22,236,106)]"></div>
+            </label>
+          </div>
         </div>
       </div>
 
