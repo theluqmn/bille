@@ -11,7 +11,7 @@ export default function App() {
       </header>
 
       {/* content */ }
-      <div class="pt-16 p-4 md:p-1 md:pt-16 lg:w-8/12 items-center mx-auto space-y-3 text-sm lg:text-base">
+      <div class="pt-16 p-4 md:p-1 md:pt-16 lg:w-6/12 items-center mx-auto space-y-3 text-sm lg:text-base">
         <div class="pb-16">
           <h1 class="text-white text-2xl">
             Electric bill calculator
@@ -50,7 +50,7 @@ export default function App() {
         <hr className="border-t-2 my-4 border-[rgb(50,50,50)]" />
 
         {/* usage */ }
-        <div class="p-2 flex flex-col gap-4 bg-[rgb(225,225,225)] rounded-md">
+        <div class="p-2 flex flex-col gap-4 bg-[rgb(255,255,255)] rounded-md">
           <div class="flex flex-row gap-2">
             <button class="p-2 bg-black rounded-md text-white">
               Calculator
@@ -67,20 +67,7 @@ export default function App() {
                 Usage (kWh)
               </h2>
 
-              <input type="number" class="rounded-md text-black text-2xl bg-[rgb(225,225,225)] duration-300" placeholder="0" />
-            </div>
-
-            <div class="p-2 flex flex-col gap-2">
-              <div class="flex flex-row gap-2 items-center">
-                <h2 class="text-xl text-black">
-                  Enable 1% late payment fee
-                </h2>
-
-                <label class="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" class="sr-only peer" />
-                  <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-                </label>
-              </div>
+              <input type="number" class="rounded-md text-black text-2xl bg-[rgb(255,255,255)] duration-300" placeholder="0" />
             </div>
           </div>
 
@@ -91,6 +78,18 @@ export default function App() {
               <p class="text-2xl text-black">
                 MYR 0.00
               </p>
+
+            </div>
+
+            <div class="p-2 flex flex-row gap-2 items-center">
+              <h2 class="text-xl text-black">
+                Enable 1% late payment fee
+              </h2>
+
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer" />
+                <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
             </div>
         </div>
       </div>
