@@ -1,4 +1,7 @@
 // SolidJS
+
+import Header from "./components/Header"
+
 export default function App() {
   return (
     <div>
@@ -12,16 +15,7 @@ export default function App() {
 
       {/* content */ }
       <div class="pt-16 p-4 md:p-1 md:pt-16 lg:w-6/12 items-center mx-auto space-y-3 text-sm lg:text-base">
-        <div class="pb-16">
-          <h1 class="text-white text-2xl">
-            Electric bill calculator
-          </h1>
-
-          <p class="text-[rgb(220,220,220)]">
-            Simple yet comprehensive bill calculator for your electricity bills,
-            no matter the provider or country. No ads, no tracking, no nonsense. Open-source and free to use.
-          </p>
-        </div>
+        <Header />
 
         {/* country and currency selection */ }
         <div>
@@ -125,6 +119,7 @@ export default function App() {
           </h1>
         </div>
       </div>
+      
       {/* footer */ }
     </div>
   )
