@@ -71,14 +71,26 @@ export default function App() {
             </div>
           </div>
 
-          <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,236,106)]">
-            <h2 class="text-xl text-black">
-              Total Due
-            </h2>
-            <p class="text-2xl text-black">
-              MYR 0.00
-            </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,236,106)]">
+              <h2 class="text-xl text-black">
+                Total Due
+              </h2>
 
+              <p class="text-2xl text-black">
+                MYR 0.00
+              </p>
+            </div>
+
+            <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,191,236)]">
+              <h2 class="text-xl text-black">
+                Service Charge
+              </h2>
+
+              <p class="text-2xl text-black">
+                MYR 0.00 (8%)
+              </p>
+            </div>
           </div>
 
           <div class="p-2 flex flex-row gap-2 items-center">
