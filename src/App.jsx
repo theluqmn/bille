@@ -71,8 +71,8 @@ export default function App() {
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-            <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,236,106)]">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
+            <div class="p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-[rgb(22,236,106)]">
               <h2 class="text-xl text-black">
                 Total Due
               </h2>
@@ -89,6 +89,16 @@ export default function App() {
 
               <p class="text-2xl text-black">
                 MYR 0.00 (8%)
+              </p>
+            </div>
+
+            <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(236,210,22)]">
+              <h2 class="text-xl text-black">
+                  Current Bill
+              </h2>
+
+              <p class="text-2xl text-black">
+                MYR 0.00
               </p>
             </div>
           </div>
