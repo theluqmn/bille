@@ -60,7 +60,7 @@ export default function App() {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 bg-black rounded-md">
-            <div class="p-2 flex flex-col gap-2">
+            <div class="p-4 md:p-2 flex flex-col gap-2">
               <h2 class="text-lg md:text-xl text-white">
                 Usage (kWh)
               </h2>
@@ -108,7 +108,7 @@ export default function App() {
             <div class="flex flex-row items-center gap-2">
 
               <h2 class="text-base md:text-xl text-black">
-                Enable 1% late payment fee
+                Apply late payment fee
               </h2>
 
               <label class="relative inline-flex items-center cursor-pointer">
