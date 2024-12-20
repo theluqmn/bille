@@ -28,7 +28,11 @@ function calculateBill(usage, country, provider) {
         console.log(total)
     }
 
-    return total
+    return {
+        bill: total,
+        service: service,
+        total: total + service
+    }
 }
 
 calculateBill(1580, "malaysia", "tnb")
