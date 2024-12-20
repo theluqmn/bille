@@ -1,7 +1,7 @@
 // SolidJS
 
 import Header from "./components/Header"
-import { calculateBill } from "./Logic.cjs"
+// import { calculateBill } from "./Logic.cjs"
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
                 Country
               </h2>
 
-              <select class="w-full p-2 rounded-md text-black bg-white hover:bg-[rgb(225,225,225)] duration-300">
+              <select class="w-full p-2 rounded-md text-black bg-white hover:brightness-90 duration-300">
                 <option value="malaysia">Malaysia (MYR)</option>
               </select>
             </div>
@@ -36,7 +36,7 @@ export default function App() {
                 Provider
               </h2>
 
-              <select class="w-full p-2 rounded-md text-black bg-white hover:bg-[rgb(225,225,225)] duration-300">
+              <select class="w-full p-2 rounded-md text-black bg-white hover:brightness-90 duration-300">
                 <option value="tnb">Tenaga Nasional Berhad</option>
                 <option value="sesb">Sabah Electricity Sdn Bhd</option>
                 <option value="seb">Sarawak Electricity Berhad</option>
@@ -50,32 +50,32 @@ export default function App() {
         {/* usage */ }
         <div class="p-2 flex flex-col gap-4 bg-[rgb(255,255,255)] rounded-md">
           <div class="flex flex-row gap-2">
-            <button class="p-2 bg-black rounded-md text-white">
+            <button class="p-2 bg-black rounded-md text-white hover:brightness-90">
               Calculator
             </button>
 
-            <button class="p-2 bg-black rounded-md text-white">
+            <button class="p-2 bg-white rounded-md text-black">
               Details
             </button>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 bg-black rounded-md">
             <div class="p-2 flex flex-col gap-2">
-              <h2 class="text-lg md:text-xl text-black">
+              <h2 class="text-lg md:text-xl text-white">
                 Usage (kWh)
               </h2>
 
-              <input type="number" class="rounded-md text-black text-2xl bg-[rgb(255,255,255)] duration-300" placeholder="0" />
+              <input type="number" class="rounded-md text-white text-2xl bg-black duration-300" placeholder="0" />
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
-            <div class="p-4 md:p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-[rgb(22,191,236)]">
-              <h2 class="text-lg md:text-xl text-black">
+            <div class="p-4 md:p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-black">
+              <h2 class="text-lg md:text-xl text-white">
                 Total Due
               </h2>
 
-              <p class="text-xl md:text-2xl text-black">
+              <p class="text-xl md:text-2xl text-white">
                 MYR 1,580.65
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function App() {
           </div>
 
           <div class="flex flex-row gap-2 items-center justify-between">
-            <button onClick={() => {}} class="p-2 bg-[rgb(22,236,106)] rounded-md text-black">
+            <button onClick={() => {}} class="p-2 bg-[rgb(22,236,106)] rounded-md text-black flex-grow hover:brightness-90 duration-300">
               Calculate
             </button>
             <div class="flex flex-row items-center gap-2">
@@ -120,8 +120,8 @@ export default function App() {
         </div>
 
         {/* calculation */}
-        <div class="p-2 flex flex-col gap-4 bg-[rgb(225,225,225)] rounded-md">
-          <h1 class="p-2 text-xl md:text-2xl text-black">
+        <div class="p-2 flex flex-col gap-4 bg-white rounded-md">
+          <h1 class="p-2 text-lg md:text-xl text-black">
             Calculation
           </h1>
         </div>
