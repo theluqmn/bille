@@ -18,7 +18,8 @@ export default function App() {
           </h1>
 
           <p class="text-[rgb(220,220,220)]">
-            Helps calculate your electricity bill based on your usage - for free
+            Simple yet comprehensive bill calculator for your electricity bills,
+            no matter the provider or country. No ads, no tracking, no nonsense. Open-source and free to use.
           </p>
         </div>
 
@@ -59,7 +60,7 @@ export default function App() {
             </button>
 
             <button class="p-2 bg-black rounded-md text-white">
-              Rates
+              Details
             </button>
           </div>
 
@@ -119,7 +120,7 @@ export default function App() {
 
         {/* calculation */}
         <div class="p-2 flex flex-col gap-4 bg-[rgb(225,225,225)] rounded-md">
-          <h1 class="p-2 text-black text-2xl">
+          <h1 class="p-2 text-xl md:text-2xl text-black">
             Calculation
           </h1>
         </div>
