@@ -31,7 +31,7 @@ export default function App() {
               </h2>
 
               <select class="w-full p-2 rounded-md text-black bg-white hover:bg-[rgb(225,225,225)] duration-300">
-                <option value="malaysia">Malaysia</option>
+                <option value="malaysia">Malaysia (MYR)</option>
               </select>
             </div>
             
@@ -62,20 +62,36 @@ export default function App() {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div class="flex flex-col gap-2">
+            <div class="p-2 flex flex-col gap-2">
               <h2 class="text-xl text-black">
-                Consumption (kWh)
+                Usage (kWh)
               </h2>
 
-              <input type="number" class="rounded-md text-black text-2xl bg-[rgb(225,225,225)] duration-300" placeholder="kW" />
+              <input type="number" class="rounded-md text-black text-2xl bg-[rgb(225,225,225)] duration-300" placeholder="0" />
             </div>
 
-            <div class="flex flex-col gap-2">
-              <h2 class="text-xl text-black">
-                Cost
-              </h2>
+            <div class="p-2 flex flex-col gap-2">
+              <div class="flex flex-row gap-2 items-center">
+                <h2 class="text-xl text-black">
+                  Enable 1% late payment fee
+                </h2>
+
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer" />
+                  <div class="w-11 h-6 bg-[rgb(50,50,50)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                </label>
+              </div>
             </div>
           </div>
+
+          <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,236,106)]">
+              <h2 class="text-xl text-black">
+                Total Due
+              </h2>
+              <p class="text-2xl text-black">
+                MYR 0.00
+              </p>
+            </div>
         </div>
       </div>
 
