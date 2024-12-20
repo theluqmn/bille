@@ -37,11 +37,13 @@ export default function App() {
             
             <div class="flex flex-col gap-2">
               <h2 class="text-xl text-white">
-                Currency
+                Provider
               </h2>
 
               <select class="w-full p-2 rounded-md text-black bg-white hover:bg-[rgb(225,225,225)] duration-300">
-                <option value="myr">MYR</option>
+                <option value="tnb">Tenaga Nasional Berhad</option>
+                <option value="sesb">Sabah Electricity Sdn Bhd</option>
+                <option value="seb">Sarawak Electricity Berhad</option>
               </select>
             </div>
           </div>
@@ -63,7 +65,7 @@ export default function App() {
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div class="p-2 flex flex-col gap-2">
-              <h2 class="text-xl text-black">
+              <h2 class="text-lg md:text-xl text-black">
                 Usage (kWh)
               </h2>
 
@@ -72,39 +74,39 @@ export default function App() {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
-            <div class="p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-[rgb(22,236,106)]">
-              <h2 class="text-xl text-black">
+            <div class="p-4 md:p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-[rgb(22,236,106)]">
+              <h2 class="text-lg md:text-xl text-black">
                 Total Due
               </h2>
 
-              <p class="text-2xl text-black">
+              <p class="text-xl md:text-2xl text-black">
                 MYR 0.00
               </p>
             </div>
 
-            <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,191,236)]">
-              <h2 class="text-xl text-black">
+            <div class="p-4 md:p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,191,236)]">
+              <h2 class="text-lg md:text-xl text-black">
                 Service Charge
               </h2>
 
-              <p class="text-2xl text-black">
+              <p class="text-xl md:text-2xl text-black">
                 MYR 0.00 (8%)
               </p>
             </div>
 
-            <div class="p-2 flex flex-col gap-2 rounded-md bg-[rgb(236,210,22)]">
-              <h2 class="text-xl text-black">
+            <div class="p-4 md:p-2 flex flex-col gap-2 rounded-md bg-[rgb(236,210,22)]">
+              <h2 class="text-lg md:text-xl text-black">
                   Current Bill
               </h2>
 
-              <p class="text-2xl text-black">
+              <p class="text-xl md:text-2xl text-black">
                 MYR 0.00
               </p>
             </div>
           </div>
 
           <div class="p-2 flex flex-row gap-2 items-center">
-            <h2 class="text-xl text-black">
+            <h2 class="text-base md:text-xl text-black">
               Enable 1% late payment fee
             </h2>
 
@@ -114,8 +116,14 @@ export default function App() {
             </label>
           </div>
         </div>
-      </div>
 
+        {/* calculation */}
+        <div class="p-2 flex flex-col gap-4 bg-[rgb(225,225,225)] rounded-md">
+          <h1 class="p-2 text-black text-2xl">
+            Calculation
+          </h1>
+        </div>
+      </div>
       {/* footer */ }
     </div>
   )
