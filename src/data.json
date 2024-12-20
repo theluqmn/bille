@@ -12,7 +12,13 @@
                     {"range": [601,900], "rate": 0.546},
                     {"range": [900,100000], "rate": 0.571}
                 ],
-                "late-payment-fee": 0.01
+                "charges": {
+                    "service": {
+                        "min": 600,
+                        "fee": 0.08
+                    },
+                    "late": "0.01"
+                }
             }
         }
     }

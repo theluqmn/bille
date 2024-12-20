@@ -1,8 +1,9 @@
-function calculateBill(usage, provider, country) {
+function calculateBill(usage, country, provider) {
     let data = require('./data.json')
     let total = 0
 
     let rates = data[country].providers[provider].rates
+    let service = data[country].providers[provider].charges.service
 
     // Loop through rates to calculate total
     for (let i = 0; i < rates.length; i++) {
@@ -16,7 +17,12 @@ function calculateBill(usage, provider, country) {
         if (usage > min) {
             // If usage exceeds max, only count units up to max
             unitsInBracket = Math.min(usage, max) - min
-            total += unitsInBracket * rate
+            if (min >= 600) {
+                // Addition 8% service charge for usages above 600
+                total += unitsInBracket * rate * 1.08
+            } else {
+                total += unitsInBracket * rate
+            }
         }
 
         console.log(total)
@@ -25,4 +31,4 @@ function calculateBill(usage, provider, country) {
     return total
 }
 
-console.log(calculateBill(1000, 'tnb', 'malaysia'))
+calculateBill(1580, "malaysia", "tnb")
