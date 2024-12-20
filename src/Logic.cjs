@@ -1,4 +1,4 @@
-function calculateBill(usage, country, provider) {
+export function calculateBill(usage, country, provider) {
     let data = require('./data.json')
     let total = 0
 

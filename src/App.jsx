@@ -1,6 +1,7 @@
 // SolidJS
 
 import Header from "./components/Header"
+import { calculateBill } from "./Logic.cjs"
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       </header>
 
       {/* content */ }
-      <div class="pt-16 p-4 md:p-1 md:pt-16 lg:w-6/12 items-center mx-auto space-y-3 text-sm lg:text-base">
+      <div class="pt-16 p-4 md:p-1 md:pt-16 lg:w-7/12 items-center mx-auto space-y-3 text-sm lg:text-base">
         <Header />
 
         {/* country and currency selection */ }
@@ -69,42 +70,41 @@ export default function App() {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
-            <div class="p-4 md:p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-[rgb(22,236,106)]">
+            <div class="p-4 md:p-2 flex flex-col md:col-span-3 gap-2 rounded-md bg-[rgb(22,191,236)]">
               <h2 class="text-lg md:text-xl text-black">
                 Total Due
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR 0.00
+                MYR 1,580.65
               </p>
             </div>
 
-            <div class="p-4 md:p-2 flex flex-col gap-2 rounded-md bg-[rgb(22,191,236)]">
+            <div class="p-4 md:p-2 flex flex-col gap-2 rounded-md bg-[rgb(225,225,225)]">
               <h2 class="text-lg md:text-xl text-black">
                 Service Charge
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR 0.00 (8%)
+                MYR 125.86 (8%)
               </p>
             </div>
 
-            <div class="p-4 md:p-2 flex flex-col gap-2 rounded-md bg-[rgb(236,210,22)]">
+            <div class="p-4 md:p-2 flex flex-col gap-2 rounded-md bg-[rgb(225,225,225)]">
               <h2 class="text-lg md:text-xl text-black">
                   Current Bill
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR 0.00
+                MYR 1243.00
               </p>
             </div>
           </div>
 
           <div class="flex flex-row gap-2 items-center justify-between">
-            <button class="p-2 bg-[rgb(22,236,106)] rounded-md text-black">
+            <button onClick={() => {}} class="p-2 bg-[rgb(22,236,106)] rounded-md text-black">
               Calculate
             </button>
-            
             <div class="flex flex-row items-center gap-2">
 
               <h2 class="text-base md:text-xl text-black">
