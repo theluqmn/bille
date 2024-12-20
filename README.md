@@ -24,8 +24,11 @@ Below are the list of countries and electricity providers supported by Bille.
 - [ ] UI
   - [x] Select country and provider
   - [x] Calculator
-    - [ ] Calculation
+    - [ ] Calculation table
+    - [ ] Note
   - [ ] Details
+    - [ ] Rates
+    - [ ] Charges and fees
 - [ ] Logic
   - [ ] Calculate total bill
   - [ ] Calculate total tax
