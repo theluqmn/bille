@@ -1,9 +1,15 @@
 // SolidJS
 
 import Header from "./components/Header"
-// import { calculateBill } from "./Logic.cjs"
+import { calculateBill } from "./Logic.cjs"
+import { createSignal } from "solid-js"
 
 export default function App() {
+  const [totalDue, setTotalDue] = createSignal(0)
+  const [serviceCharge, setServiceCharge] = createSignal(0)
+  const [totalBill, setTotalBill] = createSignal(0)
+  
+  // Rest of your component code...
   return (
     <div>
       {/* header */ }
@@ -76,7 +82,7 @@ export default function App() {
               </h2>
 
               <p class="text-xl md:text-2xl text-white">
-                MYR 1,580.65
+                MYR {totalDue.toFixed(2)}
               </p>
             </div>
 
@@ -86,7 +92,7 @@ export default function App() {
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR 125.86 (8%)
+                MYR {serviceCharge.toFixed(2)}
               </p>
             </div>
 
@@ -96,7 +102,7 @@ export default function App() {
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR 1243.00
+                MYR {totalBill.toFixed(2)}
               </p>
             </div>
           </div>
