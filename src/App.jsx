@@ -8,8 +8,10 @@ export default function App() {
   const [totalDue, setTotalDue] = createSignal(0)
   const [serviceCharge, setServiceCharge] = createSignal(0)
   const [totalBill, setTotalBill] = createSignal(0)
-  
-  // Rest of your component code...
+  const [country, setCountry] = createSignal("malaysia")
+  const [provider, setProvider] = createSignal("tnb")
+  const [applyLateFees, toggleLateFees] = createSignal(false)
+
   return (
     <div>
       {/* header */ }
