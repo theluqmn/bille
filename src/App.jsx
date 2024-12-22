@@ -82,7 +82,7 @@ export default function App() {
               </h2>
 
               <p class="text-xl md:text-2xl text-white">
-                MYR {totalDue.toFixed(2)}
+                MYR {totalDue().toFixed(2)}
               </p>
             </div>
 
@@ -92,7 +92,7 @@ export default function App() {
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR {serviceCharge.toFixed(2)}
+                MYR {serviceCharge().toFixed(2)}
               </p>
             </div>
 
@@ -102,15 +102,21 @@ export default function App() {
               </h2>
 
               <p class="text-xl md:text-2xl text-black">
-                MYR {totalBill.toFixed(2)}
+                MYR {totalBill().toFixed(2)}
               </p>
             </div>
           </div>
 
           <div class="flex flex-row gap-2 items-center justify-between">
-            <button onClick={() => {}} class="p-2 bg-[rgb(14,118,55)] rounded-md text-white flex-grow hover:brightness-90 duration-300">
+            <button onClick={() => {
+              const result = calculateBill()
+              setTotalDue(result.totalDue)
+              setServiceCharge(result.serviceCharge)
+              setTotalBill(result.totalBill)
+            }} class="p-2 bg-[rgb(14,118,55)] rounded-md text-white flex-grow hover:brightness-90 duration-300">
               Calculate
             </button>
+            
             <div class="flex flex-row items-center gap-2">
 
               <h2 class="text-base md:text-xl text-black">

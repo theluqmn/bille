@@ -1,5 +1,6 @@
+import data from './data.json' assert { type: 'json' };
+
 export function calculateBill(usage, country, provider) {
-    let data = require('./data.json')
     let total = 0
 
     let rates = data[country].providers[provider].rates

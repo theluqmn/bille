@@ -13,11 +13,8 @@
                     {"range": [900,100000], "rate": 0.571}
                 ],
                 "charges": {
-                    "service": {
-                        "min": 600,
-                        "fee": 0.08
-                    },
-                    "late": "0.01"
+                    "service": 3.00,
+                    "late": 0.01
                 }
             }
         }
