@@ -2,6 +2,9 @@
 
 import Note from "./components/Note"
 import Header from "./components/Header"
+
+import logo from "./assets/logo.png"
+
 import { calculateBill, getRates } from "./Logic.cjs"
 import { createSignal } from "solid-js"
 
@@ -20,9 +23,12 @@ export default function App() {
       {/* header */ }
       <header
       class="p-2 bg-white items-center flex flex-col fixed z-10 w-full hover:bg-[rgb(225,225,225)] duration-500">
-          <h1 class="text-xl text-black">
-            bille
-          </h1>
+          <div class="flex flex-row items-center gap-2">
+            <img class="w-8 h-8 object-cover" src={logo}/>
+            <h1 class="text-2xl text-black">
+              bille
+            </h1>
+          </div>
       </header>
 
       {/* content */ }
