@@ -1,7 +1,7 @@
 // SolidJS
 
 import Header from "./components/Header"
-import { calculateBill } from "./Logic.cjs"
+import { calculateBill, getRates } from "./Logic.cjs"
 import { createSignal } from "solid-js"
 
 export default function App() {
