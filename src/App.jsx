@@ -111,10 +111,10 @@ export default function App() {
 
           <div class="flex flex-row gap-2 items-center justify-between">
             <button onClick={() => {
-              const result = calculateBill()
-              setTotalDue(result.totalDue)
-              setServiceCharge(result.serviceCharge)
-              setTotalBill(result.totalBill)
+              const result = calculateBill(1580, country(), provider(), applyLateFees())
+              setTotalDue(result.total)
+              setServiceCharge(result.service)
+              setTotalBill(result.bill)
             }} class="p-2 bg-[rgb(14,118,55)] rounded-md text-white flex-grow hover:brightness-90 duration-300">
               Calculate
             </button>
