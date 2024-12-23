@@ -30,10 +30,10 @@ Below are the list of countries and electricity providers supported by Bille.
     - [ ] Rates
     - [ ] Charges and fees
 - [ ] Logic
-  - [ ] Calculate total bill
-  - [ ] Calculate total tax
-  - [ ] Calculate total amount
-  - [ ] Apply late payment fee
+  - [x] Calculate total bill
+  - [x] Calculate total tax
+  - [x] Calculate total amount
+  - [x] Apply late payment fee
 
 ## Stack
 
