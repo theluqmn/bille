@@ -13,7 +13,7 @@
                     {"range": [900,100000], "rate": 0.571}
                 ],
                 "charges": {
-                    "service": 3.00,
+                    "service": 0.08,
                     "late": 0.01
                 }
             }

@@ -14,14 +14,21 @@ export function calculateBill(usage, country, provider) {
         let max = rates[i].range[1];
         let rate = rates[i].rate;
 
-        let unitsInBracket = 0;
-        
-        if (usage > min) {
-            unitsInBracket = Math.min(usage, max) - min;
-            if (min >= 600) {
-                total += unitsInBracket * rate * service;
+        if (min >= 600) {
+            if (usage >= min && usage <= max) {
+                total += ((usage - min) * rate) * service;
+                break;
+                
             } else {
-                total += unitsInBracket * rate;
+                total += ((max - min) * rate) * service;
+            }
+
+        } else {
+            if (usage >= min && usage <= max) {
+                total += ((usage - min) * rate) * service;
+
+            } else {
+                total += ((max - min) * rate) * service;
             }
         }
     }
