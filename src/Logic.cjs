@@ -61,3 +61,11 @@ export function calculateBill(usage, country, provider, applyLateFee) {
         total: total + serviceCharge
     };
 }
+
+export function getRates(country, provider) {
+    if (!data[country] || !data[country].providers || !data[country].providers[provider]) {
+        throw new Error(`Invalid country (${country}) or provider (${provider}) combination`);
+    }
+
+    return data[country].providers[provider].rates;
+}
