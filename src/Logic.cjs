@@ -1,7 +1,7 @@
 import data from './data.json' assert { type: 'json' };
 
-export function calculateBill(usage, country, provider) {
-    console.log(usage, country, provider);
+export function calculateBill(usage, country, provider, applyLateFee) {
+    console.log(usage, country, provider, applyLateFee);
     if (!data[country] || !data[country].providers || !data[country].providers[provider]) {
         throw new Error(`Invalid country (${country}) or provider (${provider}) combination`);
     }
@@ -11,6 +11,7 @@ export function calculateBill(usage, country, provider) {
 
     let rates = data[country].providers[provider].rates;
     let service = data[country].providers[provider].charges.service;
+    let lateFee = data[country].providers[provider].charges.late;
 
     // Calculate the total bill
     for (let i = 0; i < rates.length; i++) {
@@ -48,6 +49,10 @@ export function calculateBill(usage, country, provider) {
     
             serviceCharge += increment;
         }
+    }
+
+    if (applyLateFee == true) {
+        total += total * lateFee;
     }
 
     return {
