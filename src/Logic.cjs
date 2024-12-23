@@ -1,6 +1,7 @@
 import data from './data.json' assert { type: 'json' };
 
 export function calculateBill(usage, country, provider) {
+    console.log(usage, country, provider);
     if (!data[country] || !data[country].providers || !data[country].providers[provider]) {
         throw new Error(`Invalid country (${country}) or provider (${provider}) combination`);
     }
@@ -17,15 +18,15 @@ export function calculateBill(usage, country, provider) {
         let max = rates[i].range[1];
         let rate = rates[i].rate;
 
-        let increment = 0;
-
-        if (usage >= min && usage <= max) {
-            increment += ((usage - min) * rate);
-        } else {
-            increment += ((max - min) * rate);
+        if (usage > min) {
+            let increment = 0;
+            if (usage >= min && usage <= max) {
+                increment = ((usage - min) * rate);
+            } else if (usage > max) {
+                increment = ((max - min) * rate);
+            }
+            total += increment;
         }
-
-        total += increment;
     }
 
     // Calculate the service charge

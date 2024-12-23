@@ -80,7 +80,7 @@ export default function App() {
                 class="rounded-md text-white text-2xl bg-black duration-300" 
                 placeholder="0"
                 value={usage()}
-                onInput={(e) => setUsage(Number(e.target.value))}
+                onInput={(e) => setUsage(e.target.value)}
               />
             </div>
           </div>
@@ -119,16 +119,10 @@ export default function App() {
 
           <div class="flex flex-row gap-2 items-center justify-between">
             <button onClick={() => {
-              if (usage() > 0) {
-                const result = calculateBill(usage(), country(), provider(), applyLateFees())
-                setTotalDue(result.total)
-                setServiceCharge(result.service) 
-                setTotalBill(result.bill)
-              } else {
-                setTotalDue(0)
-                setServiceCharge(0)
-                setTotalBill(0)
-              }
+              const result = calculateBill(usage(), country(), provider(), applyLateFees())
+              setTotalDue(result.total)
+              setServiceCharge(result.service)
+              setTotalBill(result.bill)
             }} class="p-2 bg-[rgb(14,118,55)] rounded-md text-white flex-grow hover:brightness-90 duration-300">
               Calculate
             </button>
