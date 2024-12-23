@@ -1,6 +1,6 @@
 export default function Note() {
     return (
-        <div class="pt-16">
+        <div class="pt-16 p-2">
             <h1 class="text-[rgb(255,255,255)] text-2xl">
                 Note
             </h1>

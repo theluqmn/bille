@@ -2,6 +2,7 @@
 
 import Note from "./components/Note"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 import logo from "./assets/logo.png"
 
@@ -183,7 +184,9 @@ export default function App() {
 
         <Note/>
       </div>
+
       {/* footer */ }
+      <Footer/>
     </div>
   )
 }

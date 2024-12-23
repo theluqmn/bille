@@ -4,9 +4,6 @@
 
 → [Visit the website](https://theluqmn.github.io/bille)
 
-> [!WARNING]
-> This project is still in development, though only functionality is left to be implemented.
-
 A simple yet comprehensive electric bill calculator. Supports various electricity providers in various countries. Data is updated regularly. This project also accepts contributions from the public to add more countries and providers.
 
 ## Supported Countries and Providers
@@ -26,14 +23,18 @@ Below are the list of countries and electricity providers supported by Bille.
   - [x] Calculator
     - [ ] Calculation table
     - [ ] Note
-  - [ ] Details
-    - [ ] Rates
+  - [x] Details
+    - [x] Rates
     - [ ] Charges and fees
 - [ ] Logic
   - [x] Calculate total bill
   - [x] Calculate total tax
   - [x] Calculate total amount
   - [x] Apply late payment fee
+
+### State of the project
+
+The basic idea is now fully implemented. The remaining tasks listed above are to be implemented in the future, but is not a priority.
 
 ## Stack
 
