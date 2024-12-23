@@ -8,6 +8,8 @@ export default function App() {
   const [totalDue, setTotalDue] = createSignal(0)
   const [serviceCharge, setServiceCharge] = createSignal(0)
   const [totalBill, setTotalBill] = createSignal(0)
+
+  const [usage, setUsage] = createSignal(0)
   const [country, setCountry] = createSignal("malaysia")
   const [provider, setProvider] = createSignal("tnb")
   const [applyLateFees, toggleLateFees] = createSignal(false)
@@ -73,7 +75,13 @@ export default function App() {
                 Usage (kWh)
               </h2>
 
-              <input type="number" class="rounded-md text-white text-2xl bg-black duration-300" placeholder="0" />
+              <input 
+                type="number" 
+                class="rounded-md text-white text-2xl bg-black duration-300" 
+                placeholder="0"
+                value={usage()}
+                onInput={(e) => setUsage(Number(e.target.value))}
+              />
             </div>
           </div>
 
@@ -111,10 +119,16 @@ export default function App() {
 
           <div class="flex flex-row gap-2 items-center justify-between">
             <button onClick={() => {
-              const result = calculateBill(1580, country(), provider(), applyLateFees())
-              setTotalDue(result.total)
-              setServiceCharge(result.service)
-              setTotalBill(result.bill)
+              if (usage() > 0) {
+                const result = calculateBill(usage(), country(), provider(), applyLateFees())
+                setTotalDue(result.total)
+                setServiceCharge(result.service) 
+                setTotalBill(result.bill)
+              } else {
+                setTotalDue(0)
+                setServiceCharge(0)
+                setTotalBill(0)
+              }
             }} class="p-2 bg-[rgb(14,118,55)] rounded-md text-white flex-grow hover:brightness-90 duration-300">
               Calculate
             </button>

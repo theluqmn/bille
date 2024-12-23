@@ -6,36 +6,52 @@ export function calculateBill(usage, country, provider) {
     }
 
     let total = 0;
+    let serviceCharge = 0;
+
     let rates = data[country].providers[provider].rates;
     let service = data[country].providers[provider].charges.service;
 
+    // Calculate the total bill
     for (let i = 0; i < rates.length; i++) {
         let min = rates[i].range[0];
         let max = rates[i].range[1];
         let rate = rates[i].rate;
 
-        if (min >= 600) {
-            if (usage >= min && usage <= max) {
-                total += ((usage - min) * rate) * service;
-                break;
-                
-            } else {
-                total += ((max - min) * rate) * service;
-            }
+        let increment = 0;
 
+        if (usage >= min && usage <= max) {
+            increment += ((usage - min) * rate);
         } else {
-            if (usage >= min && usage <= max) {
-                total += ((usage - min) * rate) * service;
+            increment += ((max - min) * rate);
+        }
 
+        total += increment;
+    }
+
+    // Calculate the service charge
+    if (usage > 600) {
+        usage -= 600;
+
+        for (let i = 0; i < rates.length; i++) {
+            let min = rates[i].range[0];
+            let max = rates[i].range[1];
+            let rate = rates[i].rate;
+    
+            let increment = 0;
+    
+            if (usage >= min && usage <= max) {
+                increment += ((usage - min) * rate) * service;
             } else {
-                total += ((max - min) * rate) * service;
+                increment += ((max - min) * rate) * service;
             }
+    
+            serviceCharge += increment;
         }
     }
 
     return {
         bill: total,
-        service: service,
-        total: total + service
+        service: serviceCharge,
+        total: total + serviceCharge
     };
 }
