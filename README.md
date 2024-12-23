@@ -21,12 +21,12 @@ Below are the list of countries and electricity providers supported by Bille.
 - [ ] UI
   - [x] Select country and provider
   - [x] Calculator
-    - [ ] Calculation table
-    - [ ] Note
+  - [x] Note
   - [x] Details
     - [x] Rates
     - [ ] Charges and fees
-- [ ] Logic
+  - [ ] Link UI currency according to country (currently hardcoded to MYR)
+- [x] Logic
   - [x] Calculate total bill
   - [x] Calculate total tax
   - [x] Calculate total amount
