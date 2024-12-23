@@ -59,7 +59,7 @@ export default function App() {
 
         {/* usage */ }
         <div class="p-2 flex flex-col gap-4 bg-[rgb(255,255,255)] rounded-md">
-          <div class="flex flex-row gap-2">
+          {/* <div class="flex flex-row gap-2">
             <button class="p-2 bg-black rounded-md text-white hover:brightness-90">
               Calculator
             </button>
@@ -67,7 +67,7 @@ export default function App() {
             <button class="p-2 bg-white rounded-md text-black">
               Details
             </button>
-          </div>
+          </div> */}
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 bg-black rounded-md">
             <div class="p-4 md:p-2 flex flex-col gap-2">
@@ -149,9 +149,31 @@ export default function App() {
         {/* calculation */}
         <div class="p-2 flex flex-col gap-4 bg-white rounded-md">
           <h1 class="text-lg md:text-xl text-black">
-            Calculation
+            Rates
           </h1>
+          
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-black">
+                <th class="p-2 text-left text-[rgb(225,225,225)]">Range min-max (kWh)</th>
+                <th class="p-2 text-left text-[rgb(225,225,225)]">Rate (MYR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {getRates(country(), provider()).map((rate) => (
+                <tr class="hover:bg-[rgb(245,245,245)]">
+                  <td class="p-2 border border-[rgb(225,225,225)]">
+                    {rate.range[0]} - {rate.range[2] === Infinity ? '∞' : rate.range[1]}
+                  </td>
+                  <td class="p-2 border border-[rgb(225,225,225)]">
+                    {rate.rate.toFixed(4)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+
       </div>
 
       {/* footer */ }
