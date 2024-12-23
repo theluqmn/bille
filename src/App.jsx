@@ -1,5 +1,6 @@
 // SolidJS
 
+import Note from "./components/Note"
 import Header from "./components/Header"
 import { calculateBill, getRates } from "./Logic.cjs"
 import { createSignal } from "solid-js"
@@ -174,8 +175,8 @@ export default function App() {
           </table>
         </div>
 
+        <Note/>
       </div>
-
       {/* footer */ }
     </div>
   )
