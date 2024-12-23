@@ -7,7 +7,7 @@ export default function Header() {
 
           <p class="text-[rgb(225,225,225)]">
             Simple yet comprehensive bill calculator for your electricity bills,
-            no matter the provider or country. No ads, no tracking, no nonsense. Open-source and free to use.
+            no matter the provider or country. No ads, no tracking, no nonsense.
           </p>
         </div>
     )
